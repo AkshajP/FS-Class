@@ -12,3 +12,8 @@ def testing(request):
     }
     return HttpResponse(template.render(context, request))
 
+def details_of_employees(request,id):
+    mymember = Member.objects.get(id=id)
+    template = loader.get_template('details.html')
+    context = {'mymember': mymember,}
+    return HttpResponse(template.render(context, request))
