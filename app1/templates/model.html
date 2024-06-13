@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>Id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      </tr>
+      {% for member in members %}
+      <tr>
+        <td>{{ member.id }}</td>
+        <td>{{ member.firstname }}</td>
+        <td>{{ member.lastname }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
